@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "privacy-safe-creator-media-sms"
+version = "0.1.0"
+description = "Typed Python service for paced creator media SMS delivery with recipient status."
+requires-python = ">=3.11"
+
+[project.optional-dependencies]
+test = ["pytest>=8.0"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["creator_delivery*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
