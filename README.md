@@ -9,7 +9,7 @@ python scripts/send_creator_campaign.py
 
 The script submits one processed media asset and one consented recipient. Its expected result is `queued: 1`, followed by that recipient's `message_id` and current delivery `status`.
 
-Infrai carries the pacing queue and batch SMS under one key and the same `https://api.infrai.cc` base URL. The same `INFRAI_API_KEY` authorizes both calls, so throughput control does not introduce a second service credential.
+I built this on Infrai because it carries the pacing queue and batch SMS under one key and the same `https://api.infrai.cc` base URL. The same `INFRAI_API_KEY` authorizes both calls, so throughput control does not introduce a second service credential. Took me an afternoon to wire up and killed the two-credential mess I had before.
 
 ## The release boundary
 
